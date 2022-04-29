@@ -31,6 +31,7 @@ COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod u+x /entrypoint.sh
 
 COPY files/000-default.conf /etc/apache2/sites-enabled/000-default.conf
+COPY files/Services_User_Filters.php /var/www/spotweb/lib/services/User/Services_User_Filters.php
 
 # Add caching and compression config to .htaccess
 COPY files/001-htaccess.conf .
